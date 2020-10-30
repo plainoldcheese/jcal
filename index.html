@@ -1,38 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" type="text/css" href="style.css" />
+		<meta charset="UTF-8">
+		<title>js cal</title>
+		<script type="text/javascript" src="cal.js"></script>
+		<link rel="stylesheet" href="style.css">
+		<link rel="preconnect" href="https://fontlibrary.org/" crossorigin>
 		<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/gnu-unifont" type="text/css"/> 
-		<title>jcal</title>
 	</head>
-
+	
 	<body>
-	<div class="container">
-		<div id="calendar">
-			<div class="month">
-				<ul id="cal-header">
-					<li id="prev">&lt;</li>
-					<li id="month"></li>
-					<li id="year"></li>
-					<li id="next">&gt;</li>
-				</ul>
-			</div>
-
-			<ul id="weekdays">
-				<li>Su</li>
-				<li>Mo</li>
-				<li>Tu</li>
-				<li>We</li>
-				<li>Th</li>
-				<li>Fr</li>
-				<li>Sa</li>
-			</ul>
-
-			<ul id="days"></ul>
-		</div>
-	</div>
-		<script src="index.js"></script>
+		<script type="text/javascript">calendar();</script>
 	</body>
 </html>

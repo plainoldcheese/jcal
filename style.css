@@ -1,75 +1,38 @@
-body {
-	font-family: 'UnifontMedium', monospace;
-	background: #000;
-	color: #ccc;
-	font-size: 12pt;
+body{
+    font-family: 'UnifontMedium','Courier New', Courier, monospace;
+    font-size: 24pt;
+    background-color: black;
+    color: #ccc;
 }
 
-.container {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	margin-right: -50%;
-	transform: translate(-50%, -50%);
+
+@media (prefers-color-scheme: dark) {
+    body  { background:  black; color: #ccc; }
+    #current-day { background: #ccc; color:  black; }
+}
+  
+@media (prefers-color-scheme: light) {
+    body { background: #ccc; color:  black; }
+    #current-day  { background:  black; color: #ccc; }
 }
 
-#calendar{
-	width: 19em;
+table{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) 
+}
+#header{
+    font-size: 1em;
+}
+td{
+    font-size: 0.8em;
+    text-align: center;
 }
 
-#cal-header{
-	padding: 0 0 0 0;
+#current-day{
+    background-color: #ccc;
+    color: black;
 }
-
-.month ul {
-	list-style-type: none;
-	display: grid;
-	align-content: center;
-	grid-template-columns: 0.5fr 2fr 1fr 0.5fr;
-	grid-template-rows: 2fr;
-}
-
-#month{
-	list-style-type: none;
-	text-align: center;
-	font-size: 2em;
-}
-
-#year{
-	list-style-type: none;
-	text-align: left;
-	font-size: 2em;
-}
-
-#weekdays li, #days li {
-	list-style-type: none;
-	text-align: center;
-	font-size: 1.5em;
-	padding: 5px;
-}
-
-/*current day*/
-#days li.active {
-	background: #eee;
-	color: #000;
-}
-
-#weekdays {
-	font-weight: bold;
-}
-
-#days, #weekdays{
-	display: grid;
-	align-content: center;
-	padding: 0 0 0 0;
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-	grid-template-rows: 1fr;
-}
-
-#next,
-#prev {
-	cursor: pointer;
-	font-style: bold;
-}
-#next{text-align: right;}
-#prev{text-align: left;}
